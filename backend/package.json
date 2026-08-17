@@ -1,0 +1,42 @@
+{
+  "name": "blazza-backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts",
+    "start": "node ./dist/server.js",
+    "build": "tsc && tsc-alias"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.3",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "google-auth-library": "^11.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1",
+    "nodemailer": "^9.0.3",
+    "react": "^19.2.4",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.5.2",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^19.2.14",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^6.0.2"
+  }
+}
