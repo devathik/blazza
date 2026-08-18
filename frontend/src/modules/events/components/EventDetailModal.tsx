@@ -34,6 +34,7 @@ export default function EventDetailModal({ event, onClose }: EventDetailModalPro
             src={event.image}
             alt={event.title}
             fill
+            sizes="(max-width: 640px) 100vw, 672px"
             className="object-cover"
           />
         </div>

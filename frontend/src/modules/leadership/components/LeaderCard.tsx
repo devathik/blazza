@@ -23,6 +23,7 @@ export default function LeaderCard({ leader, onSelect }: LeaderCardProps) {
             src={leader.avatar}
             alt={leader.name}
             fill
+            sizes="112px"
             className="object-cover"
           />
         </div>

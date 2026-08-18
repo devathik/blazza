@@ -36,6 +36,7 @@ export default function Navbar() {
                 src="/logo/blazza-logo.jpeg"
                 alt="BLAJA Logo"
                 fill
+                sizes="44px"
                 className="object-cover"
                 priority
               />

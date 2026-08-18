@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { X, Mail, Phone, Building, Award, Linkedin, ShieldCheck } from "lucide-react";
+import { X, Mail, Phone, Building, Award, ShieldCheck, Globe } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { LeaderMember } from "../types/leadership.types";
 
@@ -10,6 +10,14 @@ interface LeaderDetailModalProps {
   leader: LeaderMember | null;
   onClose: () => void;
 }
+
+const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 
 export default function LeaderDetailModal({ leader, onClose }: LeaderDetailModalProps) {
   const { language, t } = useLanguage();
@@ -34,6 +42,7 @@ export default function LeaderDetailModal({ leader, onClose }: LeaderDetailModal
               src={leader.avatar}
               alt={leader.name}
               fill
+              sizes="128px"
               className="object-cover"
             />
           </div>
@@ -93,7 +102,7 @@ export default function LeaderDetailModal({ leader, onClose }: LeaderDetailModal
             )}
             {leader.linkedinUrl && (
               <div className="flex items-center gap-2">
-                <Linkedin className="h-4 w-4 text-secondary shrink-0" />
+                <LinkedinIcon className="h-4 w-4 text-secondary shrink-0" />
                 <a href={leader.linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors font-bold">
                   LinkedIn Profile
                 </a>

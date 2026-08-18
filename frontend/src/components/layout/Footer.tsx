@@ -42,6 +42,7 @@ export default function Footer() {
                   src="/logo/blazza-logo.jpeg"
                   alt="BLAJA Logo"
                   fill
+                  sizes="44px"
                   className="object-cover"
                 />
               </div>

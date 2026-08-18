@@ -43,6 +43,7 @@ export default function AboutHero() {
                 src="/logo/blazza-logo.jpeg"
                 alt="BLAJA Seal"
                 fill
+                sizes="(max-width: 640px) 128px, 160px"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                 priority
               />

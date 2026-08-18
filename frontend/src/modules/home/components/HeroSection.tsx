@@ -78,6 +78,7 @@ export default function HeroSection() {
                     src="/logo/blazza-logo.jpeg"
                     alt="BLAJA Official Logo Seal"
                     fill
+                    sizes="(max-width: 640px) 176px, 224px"
                     className="object-cover"
                     priority
                   />
