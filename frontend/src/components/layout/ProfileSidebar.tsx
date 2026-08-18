@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -23,12 +23,7 @@ const menuItems = [
 
 export default function ProfileSidebar() {
   const pathname = usePathname();
-  const [unreadCount, setUnreadCount] = useState(0);
-
-  useEffect(() => {
-    // Member portal notification listener (future scope)
-    setUnreadCount(0);
-  }, []);
+  const unreadCount = 0;
 
   const handleLogout = () => {
     localStorage.removeItem("accessToken");

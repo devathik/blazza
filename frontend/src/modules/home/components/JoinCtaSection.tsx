@@ -9,35 +9,36 @@ export default function JoinCtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#072517] via-[#0B3D24] to-[#082D1B] py-16 sm:py-20 text-white border-t border-amber-400/30">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
-          <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-400/10 border border-amber-400/40 px-3.5 py-1 text-xs font-bold text-amber-300">
-              <ShieldAlert className="h-4 w-4 text-amber-400" />
+    <section className="relative overflow-hidden border-t border-primary/15 bg-primary-surface py-16 text-foreground dark:bg-[#062417] dark:text-white sm:py-20">
+      <div className="absolute inset-x-0 bottom-0 h-2 bg-[linear-gradient(90deg,#0B6B35_0%,#D6A21A_50%,#0B6B35_100%)]" />
+      <div className="container-custom relative z-10">
+        <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-primary/15 bg-white p-6 text-center shadow-xl shadow-primary/5 dark:bg-[#092B1C] lg:flex-row lg:p-8 lg:text-left">
+          <div className="max-w-2xl space-y-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-surface px-3.5 py-1.5 text-xs font-bold text-primary dark:bg-emerald-950 dark:text-emerald-400">
+              <ShieldAlert className="h-4 w-4 text-secondary-dark" />
               <span>নতুন সদস্য নিবন্ধন চালুকৃত</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white leading-tight">
+            <h2 className="text-2xl font-black leading-tight tracking-normal text-foreground dark:text-white sm:text-3xl lg:text-4xl">
               {t("cta_title")}
             </h2>
-            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            <p className="text-xs leading-relaxed text-muted-foreground dark:text-zinc-300 sm:text-sm">
               {t("cta_subtitle")}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div className="flex shrink-0 flex-col items-center gap-3 sm:flex-row">
             <Link
               href="/membership/apply"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 text-sm font-extrabold text-zinc-950 shadow-xl hover:bg-amber-300 transition-all active:scale-95"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-extrabold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary-dark active:scale-95 sm:w-auto"
             >
-              <UserCheck className="h-4 w-4" />
+              <UserCheck className="h-4 w-4 text-secondary-light" />
               <span>{t("cta_btn")}</span>
             </Link>
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-950/80 border border-emerald-700/60 px-6 py-3.5 text-sm font-bold text-zinc-200 hover:bg-emerald-900 transition-all"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-primary/20 bg-white px-6 py-3.5 text-sm font-bold text-primary shadow-xs transition-all hover:bg-primary-surface sm:w-auto"
             >
-              <MessageSquare className="h-4 w-4 text-amber-400" />
+              <MessageSquare className="h-4 w-4 text-primary" />
               <span>{t("nav_contact")}</span>
             </Link>
           </div>

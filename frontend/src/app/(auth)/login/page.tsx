@@ -30,16 +30,24 @@ type GoogleWindow = typeof window & {
   };
 };
 
+type ApiError = {
+  response?: {
+    data?: {
+      message?: string;
+    };
+  };
+  message?: string;
+};
+
 export default function LoginPage() {
   const router = useRouter();
   const googleButtonRef = useRef<HTMLDivElement | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return Boolean(localStorage.getItem("accessToken"));
+  });
   const [errorMsg, setErrorMsg] = useState("");
-
-  useEffect(() => {
-    setIsLoggedIn(Boolean(localStorage.getItem("accessToken")));
-  }, []);
 
   useEffect(() => {
     if (!config.googleClientId || isLoggedIn) return;
@@ -66,11 +74,12 @@ export default function LoginPage() {
               if (accessToken) localStorage.setItem("accessToken", accessToken);
               if (refreshToken) localStorage.setItem("refreshToken", refreshToken);
               router.replace("/profile");
-            } catch (error: any) {
+            } catch (error: unknown) {
+              const apiError = error as ApiError;
               console.error("Google login failed", error);
               setErrorMsg(
-                error?.response?.data?.message ||
-                error?.message ||
+                apiError.response?.data?.message ||
+                apiError.message ||
                 "সার্ভারের সাথে সংযোগ করা যাচ্ছে না। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন।",
               );
             } finally {

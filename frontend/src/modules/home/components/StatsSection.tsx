@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Calendar, Building2, Users, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 export default function StatsSection() {
   const { t } = useLanguage();
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true);
-  }, []);
-
   const stats = [
     {
       icon: Calendar,
@@ -36,25 +30,23 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-amber-400 py-10 border-y border-amber-500/40 text-zinc-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <section className="border-y border-border bg-white py-10 transition-colors duration-300 dark:bg-[#081C12]">
+      <div className="container-custom">
+        <div className="grid grid-cols-2 gap-4 text-center md:grid-cols-4 lg:gap-5">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
               <div
                 key={idx}
-                className={`p-4 rounded-xl bg-amber-300/40 border border-amber-500/30 transition-all duration-700 ${
-                  hasAnimated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
+                className="rounded-2xl border border-primary/10 bg-primary-surface p-5 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/50 hover:bg-white hover:shadow-lg dark:bg-[#0D2619]"
               >
-                <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B3D24] text-amber-400 shadow-md">
+                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-white text-primary shadow-2xs dark:bg-primary-dark dark:text-secondary">
                   <Icon className="h-5 w-5 stroke-[2.2]" />
                 </div>
-                <div className="text-2xl sm:text-3xl font-black tracking-tight text-[#0B3D24]">
+                <div className="text-2xl font-black tracking-normal text-primary dark:text-secondary sm:text-3xl">
                   {stat.val}
                 </div>
-                <div className="text-xs sm:text-sm font-bold text-zinc-900 mt-1">
+                <div className="mt-1 text-xs font-bold text-muted-foreground sm:text-sm">
                   {stat.label}
                 </div>
               </div>

@@ -4,10 +4,10 @@ import Providers from "./providers";
 import { TopBar, Navbar, Footer } from "@/components/layout";
 
 export const metadata: Metadata = {
-  title: "BLAJA — Bangladesh Law & Jurist's Association | বাংলাদেশ ল এন্ড জুরিস্টস এসোসিয়েশন",
-  description: "BLAJA হলো বাংলাদেশের আইনজীবী ও আইন শিক্ষার্থীদের একটি অন্যতম বৃহত্তম অরাজনৈতিক ও পেশাজীবী সংগঠন। প্রতিষ্ঠাকাল ২০১৬।",
+  title: "ব্লাজা — Bangladesh Law & Jurist's Association | বাংলাদেশ ল এন্ড জুরিস্টস এসোসিয়েশন",
+  description: "ব্লাজা হলো বাংলাদেশের আইনজীবী ও আইন শিক্ষার্থীদের একটি অন্যতম বৃহত্তম অরাজনৈতিক ও পেশাজীবী সংগঠন। প্রতিষ্ঠাকাল ২০১৬।",
 };
-
+ 
 export default function RootLayout({
   children,
 }: Readonly<{

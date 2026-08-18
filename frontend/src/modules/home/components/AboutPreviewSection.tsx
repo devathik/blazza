@@ -15,25 +15,24 @@ export default function AboutPreviewSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-zinc-50 dark:bg-[#07170E] transition-colors duration-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left info box */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950 px-3.5 py-1 text-xs font-bold text-[#0B3D24] dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
-              <Award className="h-4 w-4 text-amber-500" />
+    <section className="bg-background py-16 transition-colors duration-300 sm:py-24">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <div className="space-y-6 lg:col-span-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-3.5 py-1.5 text-xs font-bold text-primary shadow-xs">
+              <Award className="h-4 w-4 text-secondary-dark" />
               <span>সংগঠনের পরিচয়</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 dark:text-white leading-tight">
+            <h2 className="text-2xl font-extrabold leading-tight text-foreground sm:text-3xl lg:text-4xl">
               {t("about_title")}
             </h2>
 
-            <p className="text-sm font-semibold text-emerald-800 dark:text-amber-400">
+            <p className="text-sm font-semibold leading-6 text-primary dark:text-secondary-light">
               {t("about_subtitle")}
             </p>
 
-            <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+            <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
               {t("about_desc")}
             </p>
 
@@ -42,10 +41,10 @@ export default function AboutPreviewSection() {
                 const Icon = feat.icon;
                 return (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0B3D24] text-amber-400">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-primary/20 bg-primary-surface text-primary shadow-xs">
                       <Icon className="h-4 w-4" />
                     </div>
-                    <span className="text-xs sm:text-sm font-bold text-zinc-800 dark:text-zinc-200">
+                    <span className="text-xs font-bold text-foreground/90 sm:text-sm">
                       {feat.text}
                     </span>
                   </div>
@@ -56,35 +55,34 @@ export default function AboutPreviewSection() {
             <div className="pt-4">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#0B3D24] px-5 py-3 text-xs font-bold text-white shadow-md hover:bg-[#125533] transition-all hover:gap-3"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-xs font-bold text-primary-foreground shadow-xs transition-all hover:bg-primary-dark"
               >
                 <span>{t("btn_read_more")}</span>
-                <ArrowRight className="h-4 w-4 text-amber-400" />
+                <ArrowRight className="h-4 w-4 text-secondary" />
               </Link>
             </div>
           </div>
 
-          {/* Right Card Feature Showcase */}
           <div className="lg:col-span-6">
-            <div className="rounded-3xl bg-white dark:bg-[#0D2418] border border-zinc-200 dark:border-[#1A452E] p-8 shadow-xl space-y-6">
-              <div className="flex items-center gap-4 border-b border-zinc-100 dark:border-zinc-800 pb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400 text-zinc-950 font-black text-xl shadow-md">
+            <div className="space-y-6 rounded-3xl border border-primary/15 bg-white p-6 shadow-xl shadow-primary/5 sm:p-8">
+              <div className="flex items-center gap-4 border-b border-border pb-5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-xl font-black text-secondary-foreground shadow-xs">
                   ১৬
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-white">২০১৬ সালে যাত্রা শুরু</h4>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400">দেশব্যাপী আইনজীবীদের সুসংগঠিত প্ল্যাটফর্ম</p>
+                  <h4 className="text-base font-bold text-foreground">২০১৬ সালে যাত্রা শুরু</h4>
+                  <p className="text-xs text-muted-foreground">দেশব্যাপী আইনজীবীদের সুসংগঠিত প্ল্যাটফর্ম</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-[#0B3D24]/40 border border-emerald-100 dark:border-emerald-900/50">
-                  <div className="text-xs font-bold text-emerald-800 dark:text-emerald-300">জেলা কমিটিসমূহ</div>
-                  <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mt-1">স্থানীয় বিচার ব্যবস্থার সাথে কাজ</div>
+                <div className="rounded-2xl border border-primary/20 bg-primary-surface p-4">
+                  <div className="text-xs font-bold text-primary">জেলা কমিটিসমূহ</div>
+                  <div className="mt-1 text-sm font-semibold text-muted-foreground">স্থানীয় বিচার ব্যবস্থার সাথে কাজ</div>
                 </div>
-                <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40">
-                  <div className="text-xs font-bold text-amber-800 dark:text-amber-400">বিশ্ববিদ্যালয় শাখা</div>
-                  <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mt-1">আইন শিক্ষার্থীদের সহায়তা</div>
+                <div className="rounded-2xl border border-secondary/30 bg-secondary/10 p-4">
+                  <div className="text-xs font-bold text-secondary-dark dark:text-secondary-light">বিশ্ববিদ্যালয় শাখা</div>
+                  <div className="mt-1 text-sm font-semibold text-muted-foreground">আইন শিক্ষার্থীদের সহায়তা</div>
                 </div>
               </div>
             </div>
