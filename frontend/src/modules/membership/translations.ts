@@ -1,0 +1,30 @@
+export const membershipTranslations = {
+  bn: {
+    membership_hero_badge: "সদস্যপদ নিবন্ধনী ও পেশাজীবী ফোরাম",
+    membership_hero_title: "BLAJA সদস্যপদ ক্যাটাগরি ও সুযোগ-সুবিধা",
+    membership_hero_subtitle: "দেশের আইনজীবী ও আইন শিক্ষার্থীদের সবচেয়ে সক্রিয় ও ঐক্যবদ্ধ পেশাজীবী প্ল্যাটফর্মে যুক্ত হোন। পেশাগত উৎকর্ষ অর্জনে আমরা আপনার পাশে আছি।",
+    membership_types_title: "আমাদের সদস্যপদের ধরনসমূহ",
+    membership_types_sub: "আপনার পেশাগত যোগ্যতা ও অবস্থান অনুযায়ী উপযুক্ত সদস্যপদ বেছে নিন",
+    membership_benefits_title: "BLAJA সদস্যপদের সুবিধা",
+    membership_benefits_sub: "একজন নিবন্ধিত সদস্য হিসেবে আপনি যেসব বিশেষ সুবিধা উপভোগ করবেন",
+    membership_faq_title: "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী (FAQ)",
+    membership_faq_sub: "সদস্যপদ আবেদন, যোগ্যতা ও অনুমোদন প্রক্রিয়া সম্পর্কিত তথ্য",
+    membership_btn_apply: "অনলাইনে আবেদন করুন",
+    membership_btn_login: "সদস্য পোর্টালে লগইন",
+    membership_eligibility_title: "আবেদনের সাধারণ যোগ্যতা",
+  },
+  en: {
+    membership_hero_badge: "Membership & Legal Professional Forum",
+    membership_hero_title: "BLAJA Membership Categories & Benefits",
+    membership_hero_subtitle: "Join Bangladesh's premier non-political legal organization representing advocates and law students nationwide.",
+    membership_types_title: "Membership Categories",
+    membership_types_sub: "Choose the category that matches your legal profession or academic standing",
+    membership_benefits_title: "Exclusive Member Benefits",
+    membership_benefits_sub: "Privileges and opportunities guaranteed for registered BLAJA members",
+    membership_faq_title: "Frequently Asked Questions (FAQ)",
+    membership_faq_sub: "Everything you need to know about membership eligibility, approval, and portal access",
+    membership_btn_apply: "Apply Online Now",
+    membership_btn_login: "Member Portal Login",
+    membership_eligibility_title: "General Eligibility Requirements",
+  }
+};
